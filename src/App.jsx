@@ -1,8 +1,3 @@
-// climate-action-react-app | App.jsx
-// ------------------------------------------------------------
-// Now with Blog page, animations, and donation modal
-// ------------------------------------------------------------
-
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -47,7 +42,6 @@ function Home() {
         className="relative h-screen flex items-center justify-center text-white bg-fixed bg-center bg-cover"
         style={{ backgroundImage: "url('/assets/trees.jpg')" }}
       >
-        {/* <div className="absolute inset-0 bg-black bg-opacity-10"></div> */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -78,7 +72,10 @@ function Home() {
           <div className="bg-white rounded-lg shadow-xl p-8 max-w-md w-full">
             <h2 className="text-xl font-bold mb-4">Support Our Mission 💚</h2>
             <p className="mb-4 text-sm text-gray-700">
-              Every donation plants a tree, lights a village or fuels innovation. Use M-Pesa Paybill 123456, A/C: GreenFuture
+              Every donation plants a tree, lights a village or fuels innovation.
+            </p>
+            <p className="mb-4 text-sm text-gray-700">
+              Use M-Pesa Paybill 123456, A/C: GreenFuture
             </p>
             <button
               onClick={() => setShowModal(false)}
@@ -126,9 +123,7 @@ function Projects() {
   );
 }
 
-//------------------------------------------------------------
-// ✍️ Blog Page
-//------------------------------------------------------------
+// Blog Page
 function Blog() {
   const posts = [
     {
@@ -177,9 +172,7 @@ function Blog() {
 }
 
 
-//------------------------------------------------------------
-// 📬 Contact Page
-//------------------------------------------------------------
+// Contact Page
 function Contact() {
   return (
     <main className="bg-white text-emerald-700 py-20 min-h-screen flex items-center justify-center px-4">
@@ -228,35 +221,6 @@ function Contact() {
     </main>
   );
 }
-
-
-// function Blog() {
-//   const posts = [
-//     {
-//       title: "How Local Youth Are Leading Kenya’s Reforestation",
-//       excerpt: "From nursery training to drone mapping, youth-led conservation is reshaping the future."
-//     },
-//     {
-//       title: "Clean Cooking Initiatives in Rural Communities",
-//       excerpt: "Inside our solar cooking pilot reducing smoke exposure in West Pokot."
-//     }
-//   ];
-
-//   return (
-//     <main className="container mx-auto px-6 py-20">
-//       <h1 className="text-4xl font-bold mb-12 text-emerald-700 text-center">Blog & Stories</h1>
-//       <div className="grid md:grid-cols-2 gap-10">
-//         {posts.map((post, index) => (
-//           <article key={index} className="bg-white rounded-lg shadow p-6">
-//             <h3 className="text-xl font-semibold mb-2">{post.title}</h3>
-//             <p className="text-sm text-gray-600 mb-4">{post.excerpt}</p>
-//             <button className="text-emerald-600 hover:underline text-sm">Read More →</button>
-//           </article>
-//         ))}
-//       </div>
-//     </main>
-//   );
-// }
 
 function App() {
   return (
